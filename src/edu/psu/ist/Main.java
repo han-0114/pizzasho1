@@ -3,17 +3,18 @@ package edu.psu.ist;
 Project: Lab 9
 Purpose Details: Pizza ordering application
 Course: IST 242
-Author: Joe Oakes
-Date Developed: 3/14/19
-Last Date Changed: 3/13/19
-Rev: 2
+Author: Wenhua Lian
+Date Developed: 6/11/2020
+Last Date Changed: 6/14/2020
+Rev: 7
  */
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    int cCount = 1;
+    private int cCount;
+    private static Scanner scnr = new Scanner(System.in);
     public static void main(String[] args) {
 
         Main main = new Main();
@@ -33,12 +34,12 @@ public class Main {
         ArrayList<Transaction> tList = new ArrayList<>();
 
         Order order1 = new Order(1);
-        Transaction trans1 = new Transaction(1, order1, PaymentType.cash);
+        Transaction trans1 = new Transaction(1, order1,PaymentType.cash);
 
-        Menu menu1 = new Menu(1, "Plain");
-        Menu menu2 = new Menu(2, "Meat");
-        Menu menu3 = new Menu(3, "Extra");
-        Menu menu4 = new Menu(4, "Veg");
+        Menu menu1 = new Menu(1, "Plain",10);
+        Menu menu2 = new Menu(2, "Meat",15);
+        Menu menu3 = new Menu(3, "Extra",13);
+        Menu menu4 = new Menu(4, "Veg", 11);
 
         mList.add(menu1);
         mList.add(menu2);
@@ -58,7 +59,16 @@ public class Main {
                     break;
                 case MENU_CODE : Menu.listMenu(mList);
                     break;
-                case ORDE_CODE : //Order.addOrders();
+                case ORDE_CODE :
+                    System.out.print("Enter Customer ID : ");
+                    int cid = scnr.nextInt();
+                    if (cid<cList.size()){
+                        ArrayList<Menu>cMenu=selectMenu(mList);
+                        Order.addOrders(order1,cList.get(cid),cMenu);
+                        oList.add(order1);
+                        trans1=Payment(order1);
+                        tList.add(trans1);
+                    }
                     break;
                 case TRAN_CODE : Transaction.listTransactions(tList);
                     break;
@@ -66,6 +76,60 @@ public class Main {
 
             userAction = getAction(PROMPT_ACTION);
         }
+    }
+
+
+
+    private static Transaction Payment(Order order1) {
+        double total = 0;
+        double amount;
+        System.out.println("Bill is");
+        for (Menu menu : order1.getMenuItem()){
+            System.out.print(menu.getmenuItem());
+            System.out.print("Quantity: ");
+            System.out.println(menu.getQuantity());
+            System.out.print("amount: ");
+            amount = menu.getQuantity() * menu.getItemPrice();
+            total = total +amount;
+            System.out.println(amount);
+        }
+        System.out.print("Total is: ");
+        System.out.println(total);
+        int choose;
+        Transaction t;
+        while (true){
+            System.out.print("Choose the way to pay: ");
+            System.out.println("Choose 1 would be Cash");
+            System.out.println("Choose 2 would be Card");
+            choose = scnr.nextInt();
+            if (choose==1){
+                t=new Transaction(order1.getorderId(),order1,PaymentType.cash);
+                return t;
+            }
+            else if (choose==2){
+                t=new Transaction(order1.getorderId(),order1,PaymentType.credit);
+                return t;
+            }
+        }
+    }
+
+    public static ArrayList<Menu> selectMenu(ArrayList<Menu> menus){
+        System.out.println("Select menu (by ID): (Press 0 to finalize)");
+        for (Menu menu : menus)
+            System.out.println("'" + menu.getmenuId() + "' for " + menu.getmenuItem());
+        int flag;
+        ArrayList<Menu> menus1 = new ArrayList<>();
+        while(true) {
+            flag = scnr.nextInt();
+            if(flag == 0)
+                break;
+            System.out.print("Add quantity :");
+            int quantity = scnr.nextInt();
+            Menu item = menus.get(flag-1);
+            item.setQuantity(quantity);
+            menus1.add(item);
+        }
+        return menus1;
     }
 
     public static char getAction(String prompt) {
@@ -79,7 +143,6 @@ public class Main {
 
     public Customer addCustomer(){
         Customer cust = new Customer(cCount++);
-        Scanner scnr = new Scanner(System.in);
         System.out.println("Please Enter your Name: ");
         cust.setCustomerName(scnr.nextLine());
         System.out.println("Please Enter your Phone: ");

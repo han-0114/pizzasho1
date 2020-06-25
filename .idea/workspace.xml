@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1ebe2ad-27b6-44d8-a9a4-cdde336c4a10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/psu/ist/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/psu/ist/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/psu/ist/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/psu/ist/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/psu/ist/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/psu/ist/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/psu/ist/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/psu/ist/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/psu/ist/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/psu/ist/Transaction.java" afterDir="false" />
@@ -51,6 +51,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
@@ -125,22 +126,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="552" y="334" width="262" height="278" key="Github.ShareDialog/0.0.1368.872@0.0.1368.872" timestamp="1592662085005" />
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1592149803013">
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1593050273432">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1592149803013" />
-    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1592149803012">
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1593050273432" />
+    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1593050273432">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1592149803012" />
-    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1592149803012">
+    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1593050273432" />
+    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1593050273432">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1592149803012" />
-    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1592149803013">
+    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1593050273432" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1593050273432">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1592149803013" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1593050273432" />
     <state x="165" y="11" key="SettingsEditor" timestamp="1592679814517">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -149,6 +150,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="531" y="350" key="VCS.ChangelistChooser/0.0.1368.872@0.0.1368.872" timestamp="1592096980645" />
+    <state x="93" y="93" width="1181" height="685" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1593050273513">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="93" y="93" width="1181" height="685" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1368.872@0.0.1368.872" timestamp="1593050273513" />
     <state x="347" y="184" width="672" height="678" key="search.everywhere.popup" timestamp="1592098772863">
       <screen x="0" y="0" width="1368" height="872" />
     </state>

@@ -1,5 +1,13 @@
 package edu.psu.ist;
-
+/*
+Project: Lab 9
+Purpose Details: Pizza ordering application
+Course: IST 242
+Author: Wenhua Lian
+Date Developed: 6/11/2020
+Last Date Changed: 6/14/2020
+Rev: 7
+ */
 import java.util.ArrayList;
 
 public class Order {
